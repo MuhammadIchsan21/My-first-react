@@ -1,9 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/header";
 import Footer from "./components/Footer";
 import Home from "./Views/Home";
 import About from "./Views/About";
+import Product from "./Views/Product";
 
 function App() {
   return (
@@ -15,8 +16,11 @@ function App() {
             <Route exact path='/'>
               <Home />
             </Route>
-            <Route exact path='/about'>
+            <Route path='/about'>
               <About />
+            </Route>
+            <Route path='/products/:id'>
+              <Product />
             </Route>
           </Switch>
         </div>
